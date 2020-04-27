@@ -1,0 +1,142 @@
+---
+layout: main
+---
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8">
+
+            <div class="nk-gap-5"></div>
+
+            <!-- START: Posts List -->
+            <div class="nk-blog-isotope-2 nk-isotope nk-isotope-gap nk-isotope-1-cols">
+
+                
+            {% for post in site.posts %}    
+                <!-- START: Post -->
+                <div class="nk-isotope-item" data-filter="{{post.categories[0]}}">
+                    <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                            <a href="{{ post.url }}">
+                                <img src="{{post.link_img}}" alt="" class="nk-img-stretch">
+                            </a>
+                            <div class="nk-post-category"><a href="">{{post.categories[0]}}</a></div>
+                        </div>
+                        <h2 class="nk-post-title h3"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+                        <div class="nk-post-date">
+                            {{post.time}}
+                        </div>
+
+                        <div align="justify" class="nk-post-text">
+                             {{ post.excerpt }}
+
+                            <a href="{{ post.url }}" class="nk-btn nk-btn-md nk-btn-outline nk-btn-color-gray-7 nk-btn-hover-color-dark-3 text-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Post -->
+                
+            {% endfor %} 
+                
+
+            </div>
+
+            <!-- END: Posts List -->
+            <div class="nk-gap-5"></div>
+            <blockquote class="nk-blockquote-style-2">
+               
+                    Một số bài đăng đang được cập nhật, chúng sẽ sớm xuất hiện trở lại trong tương lai gần.
+               
+            </blockquote>
+            
+            <div class="nk-gap-5"></div>
+
+        </div>
+        <div class="col-lg-4">
+            <!--
+                START: Sidebar
+
+                Additional Classes:
+                    .nk-sidebar-sticky
+
+                Additional Attributes:
+                    data-offset-top - add top offset to sticky sidebar
+            -->
+            <aside class="nk-sidebar nk-sidebar-sticky" data-offset-top="0">
+
+                <div class="nk-gap-5"></div>
+
+<div class="nk-widget">
+    <h4 class="nk-widget-title">QUOTES</h4>
+
+            <p class="text-center">Một mình làm chủ số phận,<br>
+                Một mình chèo lái linh hồn. </p>
+            <div class="nk-social nk-social-center">
+                <ul>
+                                <li><a class="nk-social-twitter" href="https://twitter.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-twitter"></span><span class="nk-social-back fab fa-twitter"></span></span></a></li>
+                                <li><a class="nk-social-facebook" href="https://www.facebook.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-facebook"></span><span class="nk-social-back fab fa-facebook"></span></span></a></li>
+                                <li><a class="nk-social-500px" href="https://www.500px.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-500px"></span><span class="nk-social-back fab fa-500px"></span></span></a></li>
+                                <li><a class="nk-social-instagram" href="https://www.instagram.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-instagram"></span><span class="nk-social-back fab fa-instagram"></span></span></a></li>
+                                <li><a class="nk-social-github" href="https://www.github.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-github"></span><span class="nk-social-back fab fa-github"></span></span></a></li>
+                            </ul>
+            </div>
+    
+
+</div>
+
+
+
+                <div class="nk-widget">
+    <h4 class="nk-widget-title">Recent Posts</h4>
+
+    <div class="nk-recent-posts">
+        
+            {% for post in site.posts limit:3 %}
+
+            <!-- START: Post -->
+            <div class="nk-recent-post">
+                <div class="nk-recent-post-thumb">
+                    <a href="{{ post.url }}">
+                        <img src="{{post.link_img}}" alt="" class="nk-img-stretch">
+                    </a>
+                </div>
+                <div class="nk-recent-post-cont">
+                    <h3 class="nk-recent-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <div class="nk-recent-post-date">{{post.time}}</div>
+                </div>
+            </div>
+            <!-- END: Post -->
+        
+            {% endfor %}
+            
+        
+    </div>
+</div>
+
+<div class="nk-widget">
+    <h4 class="nk-widget-title">Categories</h4>
+    <ul class="nk-categories-list">
+        <li><a href="blog"><span class="pe-7s-angle-right"></span> BLOG</a></li>
+        <li><a href="travel" ><span class="pe-7s-angle-right"></span> TRAVEL</a></li>
+        <li><a href="linhtinh" ><span class="pe-7s-angle-right"></span> LINHTINH</a></li>
+    </ul>
+</div>
+
+                <div class="nk-gap-5"></div>
+
+            </aside>
+            <!-- END: Sidebar -->
+        </div>
+    </div>
+
+</div>
+
+    </div>
+    <!-- END: Main Content -->
+
+
+
+
+

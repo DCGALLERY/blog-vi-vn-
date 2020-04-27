@@ -1,0 +1,193 @@
+---
+layout: category
+categories: [travel]
+title: Category - Travel
+link_img: assets/images/meta/travel.jpg
+excerpt: Bạn đang đọc một blog kỳ cục với những bài viết kỳ cục của một người người kỳ cục.
+---
+
+
+
+
+<!-- START: Header Title -->
+<!--
+    Additional Classes:
+        .nk-header-title-sm
+        .nk-header-title-md
+        .nk-header-title-lg
+        .nk-header-title-xl
+        .nk-header-title-full
+        .nk-header-title-parallax
+        .nk-header-title-parallax-content
+        .nk-header-content-center-center
+        .nk-header-content-center-left
+        .nk-header-content-center-right
+        .nk-header-content-top-center
+        .nk-header-content-top-left
+        .nk-header-content-top-right
+        .nk-header-content-bottom-center
+        .nk-header-content-bottom-left
+        .nk-header-content-bottom-right
+-->
+<div class="nk-header-title nk-header-title-sm nk-header-title-parallax-content nk-header-content-bottom-left">
+    
+    <div class="bg-image bg-image-parallax">
+        <img src="assets/images/background/travel.jpg" alt="" class="jarallax-img">
+        
+    </div>
+    
+    
+    <div class="nk-header-content">
+        <div class="nk-header-content-inner">
+            <div class="container">
+                
+                
+                    <h1 class="nk-title display-3 text-white">TRAVEL<br> <em>/category/</em></h1>
+                
+                
+               
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+
+<!-- END: Header Title -->
+
+<div class="container">
+
+
+            
+    <div class="row">
+        <div class="col-lg-8">
+
+            <div class="nk-gap-3"></div>
+            
+            
+
+            <!-- START: Posts List -->
+            <div class="nk-blog-isotope nk-isotope nk-isotope-gap nk-isotope-2-cols">
+
+                {% for travel in site.categories.travel %}
+
+                    <!-- START: Post -->
+                    <div class="nk-isotope-item" data-filter="{{travel.categories[0]}}">
+                        <div class="nk-blog-post">
+                            <div class="nk-post-thumb">
+                                <a href="{{ travel.url }}">
+                                    <img src="{{travel.link_img}}" alt="" class="nk-img-stretch">
+                                </a>
+                                <div class="nk-post-category"><a href="blog">{{travel.categories[0]}}</a></div>
+                            </div>
+                            <h2 class="nk-post-title h4"><a href="{{ blog.url }}">{{ travel.title }}</a></h2>
+
+                            <div class="nk-post-date">
+                                {{travel.time}}
+                            </div>
+
+                            <div align="justify" class="nk-post-text">
+                                {{travel.excerpt }}
+                            </div>
+                            <div class="nk-gap"></div>
+                            <a href="{{ travel.url }}" class="nk-btn nk-btn-sm nk-btn-outline nk-btn-color-gray-7 nk-btn-hover-color-dark-3 text-dark">Read More</a>
+                        </div>
+                    </div>
+                    <!-- END: Post -->
+                
+                {% endfor %}
+                    
+                
+
+            </div>
+
+
+            <!-- END: Posts List -->
+
+            <div class="nk-gap-5"></div>
+
+        </div>
+        <div class="col-lg-4">
+            <!--
+                START: Sidebar
+
+                Additional Classes:
+                    .nk-sidebar-sticky
+
+                Additional Attributes:
+                    data-offset-top - add top offset to sticky sidebar
+            -->
+            <aside class="nk-sidebar nk-sidebar-sticky" data-offset-top="0">
+
+                <div class="nk-gap-3"></div>
+
+<div class="nk-widget">
+    <h4 class="nk-widget-title">QUOTES</h4>
+
+            <p class="text-center">Một mình làm chủ số phận,<br>
+                Một mình chèo lái linh hồn. </p>
+            <div class="nk-social nk-social-center">
+                <ul>
+                    <li><a class="nk-social-twitter" href="https://twitter.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-twitter"></span><span class="nk-social-back fab fa-twitter"></span></span></a></li>
+                    <li><a class="nk-social-facebook" href="https://www.facebook.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-facebook"></span><span class="nk-social-back fab fa-facebook"></span></span></a></li>
+                    <li><a class="nk-social-500px" href="https://www.500px.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-500px"></span><span class="nk-social-back fab fa-500px"></span></span></a></li>
+                    <li><a class="nk-social-instagram" href="https://www.instagram.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-instagram"></span><span class="nk-social-back fab fa-instagram"></span></span></a></li>
+                    <li><a class="nk-social-github" href="https://www.github.com/ledhcg" target="_black"><span><span class="nk-social-front fab fa-github"></span><span class="nk-social-back fab fa-github"></span></span></a></li>
+                </ul>
+            </div>
+    
+
+</div>
+
+
+                <div class="nk-widget">
+    <h4 class="nk-widget-title">Recent Posts</h4>
+
+    <div class="nk-recent-posts">
+        
+            
+           {% for post in site.posts limit:3 %}
+
+            <!-- START: Post -->
+            <div class="nk-recent-post">
+                <div class="nk-recent-post-thumb">
+                    <a href="{{ post.url }}">
+                        <img src="{{post.link_img}}" alt="" class="nk-img-stretch ">
+                    </a>
+                </div>
+                <div class="nk-recent-post-cont">
+                    <h3 class="nk-recent-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <div class="nk-recent-post-date">{{post.time}}</div>
+                </div>
+            </div>
+            <!-- END: Post -->
+        
+            {% endfor %}
+        
+            
+           
+        
+    </div>
+</div>
+
+<div class="nk-widget">
+    <h4 class="nk-widget-title">Categories</h4>
+    <ul class="nk-categories-list">
+        <li><a href="blog"><span class="pe-7s-angle-right"></span> BLOG</a></li>
+        <li><a href="travel" ><span class="pe-7s-angle-right"></span> TRAVEL</a></li>
+        <li><a href="linhtinh" ><span class="pe-7s-angle-right"></span> LINHTINH</a></li>
+    </ul>
+</div>
+
+
+                <div class="nk-gap-5"></div>
+
+            </aside>
+            <!-- END: Sidebar -->
+        </div>
+    </div>
+
+</div>
+
+    </div>
+    <!-- END: Main Content -->
